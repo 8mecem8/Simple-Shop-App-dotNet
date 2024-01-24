@@ -1,0 +1,33 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = testGameStore.client
+build_property.RootNamespace = testGameStore.client
+build_property.ProjectDir = F:\Main Files\Programming\Projects\Low level Projects\dot.NET projects\Blazor SPA Full Stack\Simple Shop App\testGameStore.client\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = F:\Main Files\Programming\Projects\Low level Projects\dot.NET projects\Blazor SPA Full Stack\Simple Shop App\testGameStore.client
+build_property._RazorSourceGeneratorDebug = 
+
+[F:/Main Files/Programming/Projects/Low level Projects/dot.NET projects/Blazor SPA Full Stack/Simple Shop App/testGameStore.client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Main Files/Programming/Projects/Low level Projects/dot.NET projects/Blazor SPA Full Stack/Simple Shop App/testGameStore.client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Main Files/Programming/Projects/Low level Projects/dot.NET projects/Blazor SPA Full Stack/Simple Shop App/testGameStore.client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Main Files/Programming/Projects/Low level Projects/dot.NET projects/Blazor SPA Full Stack/Simple Shop App/testGameStore.client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-6a37dtvm6r

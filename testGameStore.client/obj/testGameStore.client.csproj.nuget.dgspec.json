@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\Main Files\\Programming\\Projects\\Low level Projects\\dot.NET projects\\Blazor SPA Full Stack\\Simple Shop App\\testGameStore.client\\testGameStore.client.csproj": {}
+  },
+  "projects": {
+    "F:\\Main Files\\Programming\\Projects\\Low level Projects\\dot.NET projects\\Blazor SPA Full Stack\\Simple Shop App\\testGameStore.client\\testGameStore.client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Main Files\\Programming\\Projects\\Low level Projects\\dot.NET projects\\Blazor SPA Full Stack\\Simple Shop App\\testGameStore.client\\testGameStore.client.csproj",
+        "projectName": "testGameStore.client",
+        "projectPath": "F:\\Main Files\\Programming\\Projects\\Low level Projects\\dot.NET projects\\Blazor SPA Full Stack\\Simple Shop App\\testGameStore.client\\testGameStore.client.csproj",
+        "packagesPath": "C:\\Users\\MeceM\\.nuget\\packages\\",
+        "outputPath": "F:\\Main Files\\Programming\\Projects\\Low level Projects\\dot.NET projects\\Blazor SPA Full Stack\\Simple Shop App\\testGameStore.client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MeceM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[7.0.7, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[7.0.7, 7.0.7]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
