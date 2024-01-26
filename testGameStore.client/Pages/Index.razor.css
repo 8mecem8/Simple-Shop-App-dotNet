@@ -1,0 +1,36 @@
+#games-table-main
+{
+    all: unset;
+    margin: 2em;
+}
+
+#games-table-main > thead > tr > th 
+{
+    all: unset;
+    display: table-cell;
+    margin: 1rem;
+    text-align: center;
+    font-weight: bold;
+    color: aliceblue;
+    background: black;
+    padding: 1rem;
+}
+
+
+#games-table-main > tbody
+{
+    border: 1rem transparent solid;;
+} 
+
+#games-table-main > tbody > tr > td 
+{
+    all: unset;
+    display: table-cell;
+    text-align: center;
+    border: 1.3rem transparent solid;;
+}
+
+#games-table-main > tbody > tr:nth-child(even)
+{
+    background-color: rgb(207, 207, 207);
+}

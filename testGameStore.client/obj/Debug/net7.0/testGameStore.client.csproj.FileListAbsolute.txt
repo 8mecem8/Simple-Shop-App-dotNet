@@ -825,3 +825,4 @@ F:\Main Files\Programming\Projects\Low level Projects\dot.NET projects\Blazor SP
 F:\Main Files\Programming\Projects\Low level Projects\dot.NET projects\Blazor SPA Full Stack\Simple Shop App\testGameStore.client\obj\Debug\net7.0\refint\testGameStore.client.dll
 F:\Main Files\Programming\Projects\Low level Projects\dot.NET projects\Blazor SPA Full Stack\Simple Shop App\testGameStore.client\obj\Debug\net7.0\testGameStore.client.pdb
 F:\Main Files\Programming\Projects\Low level Projects\dot.NET projects\Blazor SPA Full Stack\Simple Shop App\testGameStore.client\obj\Debug\net7.0\ref\testGameStore.client.dll
+F:\Main Files\Programming\Projects\Low level Projects\dot.NET projects\Blazor SPA Full Stack\Simple Shop App\testGameStore.client\obj\Debug\net7.0\scopedcss\Pages\Index.razor.rz.scp.css
