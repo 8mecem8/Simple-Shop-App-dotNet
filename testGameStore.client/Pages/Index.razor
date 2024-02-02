@@ -1,10 +1,28 @@
-﻿@page "/"
+﻿@* ---------------------------- Blazor Settings ---------------------------- *@
 
+@page "/"
 @using Models
-
+@inject NavigationManager NavigationManager
 <PageTitle>Index</PageTitle>
 
+@* ---------------------------- Blazor Settings ---------------------------- *@
+
+
+
+
+@* ---------------------------- HTML+c# ---------------------------- *@
 <h1>Game Catalog</h1>
+
+<nav>
+    <ul>
+        <li class="Nav-link-list"><button @onclick='()=>{NavigationManager.NavigateTo("/newgame");}' >Add New Game</button></li>
+    </ul>
+</nav>
+
+@if(games == null)
+{
+    <p>Loading...</p>
+}
 
 <table id="games-table-main">
     <thead>
@@ -13,6 +31,7 @@
         <th>Genre</th>
         <th>Price</th>
         <th>Release Date</th>
+        <th></th>
     </thead>
     <tbody>
         @foreach(var item in games)
@@ -23,42 +42,32 @@
                 <td>@item.Genre</td>
                 <td>@item.Price</td>
                 <td>@item.ReleaseDate.ToString("MM/dd/yyyy")</td>
+                <td><button @onclick='()=>{NavigationManager.NavigateTo($"/mgame/{item.Id}");}'> <i class="oi oi-pencil" /> </button></td>
             </tr>
         }
 
     </tbody>
 </table>
 
+@* ---------------------------- HTML+c# ---------------------------- *@
 
+
+
+@* ---------------------------- C# ---------------------------- *@
 
 @code
 {
-    private dynamic @* or Game[] *@ games = new[]
+    private Game[]? games;
+
+    protected override void OnInitialized()
     {
-        new Game()
-        {
-            Id = 1,
-            Name = "Street Fighter",
-            Genre = "Fighting",
-            Price = 19.99M,
-            ReleaseDate = new DateTime(1991, 2, 1)
-        },
-        new Game()
-        {
-            Id = 2,
-            Name = "Final Fantasy XIV",
-            Genre = "Roleplaying",
-            Price = 59.99M,
-            ReleaseDate = new DateTime(2010, 9, 30)
-        },
-        new Game()
-        {
-            Id = 3,
-            Name = "FIFA 23",
-            Genre = "Sports",
-            Price = 69.99M,
-            ReleaseDate = new DateTime(2022, 9, 27)
-        },
-    };
+        games = GameClient.GetGames();
+    }
+
+
+
+
+
 }
 
+@* ---------------------------- C# ---------------------------- *@

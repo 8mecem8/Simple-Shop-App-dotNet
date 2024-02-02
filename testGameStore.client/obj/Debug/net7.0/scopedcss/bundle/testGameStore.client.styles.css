@@ -1,4 +1,9 @@
 /* /Pages/Index.razor.rz.scp.css */
+.Nav-link-list[b-cdqvfr15gh]
+{
+    list-style: none;
+}
+
 #games-table-main[b-cdqvfr15gh]
 {
     all: unset;
@@ -34,6 +39,13 @@
 #games-table-main > tbody > tr:nth-child(even)[b-cdqvfr15gh]
 {
     background-color: rgb(207, 207, 207);
+}
+/* /Pages/NewEditGame.razor.rz.scp.css */
+#game-form-container[b-2esbzw1wun]
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-6a37dtvm6r] {

@@ -1,0 +1,125 @@
+﻿@* ---------------------------- Blazor Settings ---------------------------- *@
+
+@page "/mgame"
+@page "/mgame/{id:int}"
+@inject NavigationManager NavigationManager
+<PageTitle>@title</PageTitle>
+
+@* ---------------------------- Blazor Settings ---------------------------- *@
+
+
+
+
+
+@* ---------------------------- HTML+c# ---------------------------- *@
+
+<h1>Game Catalog</h1>
+<h3>@title</h3>
+
+
+@if(gameModal is null)
+{
+    <p>Loading...</p>;
+}
+
+<section>
+    
+    <EditForm Model="@gameModal" OnValidSubmit="HandleSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        
+        <div id="game-form-container">
+            <label>
+                Name:
+                <InputText @bind-Value="gameModal.Name" />
+            </label>
+            <label>
+                Genre:
+                <InputSelect @bind-Value="gameModal.Genre">
+                    <option value="">Select Genre</option>
+                    <option value="Fighting">Fighting</option>
+                    <option value="Kids and Family">Kids and Family</option>
+                    <option value="Racing">Racing</option>
+                    <option value="Role-playing">Role-playing</option>
+                    <option value="Sports">Sports</option>
+                </InputSelect>
+            </label>
+            <label>
+                Price:
+                <InputNumber @bind-Value="gameModal.Price" />
+            </label>
+            <label>
+                Release Date:
+                <InputDate @bind-Value="gameModal.ReleaseDate" />
+            </label>
+        </div>
+        <button type="submit">Add</button>
+        <button type="button" @onclick='()=>{NavigationManager.NavigateTo("/");}'>Cancel</button>
+    </EditForm>
+</section>
+
+@* ---------------------------- HTML+c# ---------------------------- *@
+
+
+
+
+
+@* ---------------------------- C# ---------------------------- *@
+
+@code 
+{
+    [Parameter]
+    public int? Id {get; set;}
+    private Models.Game? gameModal ;
+
+    private string title = string.Empty;
+
+    protected override void OnParametersSet()
+    {
+        if(Id is not null)
+        {
+            Models.Game foundGame = GameClient.GetGame(Id.Value);
+
+            gameModal = new()
+            {
+                Id = foundGame.Id,
+                Name = foundGame.Name,
+                Genre = foundGame.Genre,
+                Price = foundGame.Price,
+                ReleaseDate = foundGame.ReleaseDate,
+            };
+
+            title = $"Edit {foundGame.Name}";
+        }
+        else
+        {
+            gameModal = new()
+            {
+                Name = String.Empty,
+                Genre = String.Empty,
+                ReleaseDate = DateTime.UtcNow
+            };
+
+            title =  "New Game";
+        }
+    }
+
+    private void HandleSubmit()
+    {
+        
+       
+            if(gameModal!.Id == 0)
+            {
+                GameClient.AddGame(gameModal);
+            }
+            else
+            {
+                GameClient.EditGame(gameModal);
+            }
+            NavigationManager.NavigateTo("/");
+        
+    }
+
+}
+
+@* ---------------------------- C# ---------------------------- *@
