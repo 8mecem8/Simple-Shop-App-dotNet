@@ -62,4 +62,13 @@ public static class GameClient
         gametoEdit.Genre = singleGame.Genre;
         gametoEdit.ReleaseDate = singleGame.ReleaseDate;
     }
+
+    public static void DeleteGame(int id)
+    {
+
+        Game gametoDelete = GetGame(id);
+
+        games.Remove(gametoDelete);
+
+    }
 }

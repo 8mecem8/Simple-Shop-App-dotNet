@@ -7,6 +7,7 @@
 {
     all: unset;
     margin: 2em;
+    display: table;
 }
 
 #games-table-main > thead > tr > th 

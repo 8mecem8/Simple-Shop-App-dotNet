@@ -15,13 +15,18 @@
 
 <nav>
     <ul>
-        <li class="Nav-link-list"><button @onclick='()=>{NavigationManager.NavigateTo("/newgame");}' >Add New Game</button></li>
+        <li class="Nav-link-list"><button @onclick='()=>{NavigationManager.NavigateTo("/mgame");}' >Add New Game</button></li>
     </ul>
 </nav>
 
 @if(games == null)
 {
     <p>Loading...</p>
+}
+
+@if(shouldDialogBeVisable == true)
+{
+    <DeleteGame oneGame="@currentGame" OnClose="@OnDeleteModalClose" />
 }
 
 <table id="games-table-main">
@@ -42,7 +47,10 @@
                 <td>@item.Genre</td>
                 <td>@item.Price</td>
                 <td>@item.ReleaseDate.ToString("MM/dd/yyyy")</td>
-                <td><button @onclick='()=>{NavigationManager.NavigateTo($"/mgame/{item.Id}");}'> <i class="oi oi-pencil" /> </button></td>
+                <td>
+                    <button @onclick='()=>{NavigationManager.NavigateTo($"/mgame/{item.Id}");}'> <i class="oi oi-pencil" /> </button>
+                    <button @onclick='()=>{shouldDialogBeVisable=true; currentGame = item;}'> <i class="oi oi-x" /> </button>
+                </td>
             </tr>
         }
 
@@ -59,12 +67,28 @@
 {
     private Game[]? games;
 
+    private Game? currentGame;
+
+    private bool shouldDialogBeVisable = false;
+
     protected override void OnInitialized()
     {
         games = GameClient.GetGames();
     }
 
-
+    private void OnDeleteModalClose(bool accepted)
+    {
+        if(accepted)
+        {
+            GameClient.DeleteGame(currentGame!.Id);
+            games = GameClient.GetGames();
+            shouldDialogBeVisable = false;
+        }
+        if(!accepted)
+        {
+            shouldDialogBeVisable = false;
+        }
+    }
 
 
 

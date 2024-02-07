@@ -1,3 +1,8 @@
+/* /Pages/DeleteGame.razor.rz.scp.css */
+#Delete-Modal[b-96u2x3xl1w]
+{
+    background: beige;
+}
 /* /Pages/Index.razor.rz.scp.css */
 .Nav-link-list[b-cdqvfr15gh]
 {
@@ -8,6 +13,7 @@
 {
     all: unset;
     margin: 2em;
+    display: table;
 }
 
 #games-table-main > thead > tr > th[b-cdqvfr15gh] 
